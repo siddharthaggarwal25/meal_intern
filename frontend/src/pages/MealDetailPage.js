@@ -47,13 +47,6 @@ const MealDetailPage = () => {
     return <Error message="Meal not found" />;
   }
 
-  const getYoutubeId = (url) => {
-    if (!url) return null;
-    const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?#]+)/);
-    return match ? match[1] : null;
-  };
-
-  const youtubeId = getYoutubeId(meal.youtube);
 
   return (
     <div className="meal-detail-page">
@@ -104,7 +97,7 @@ const MealDetailPage = () => {
                 <iframe
                   width="100%"
                   height="400"
-                  src={`https://www.youtube.com/embed/${youtubeId}`}
+                  src={meal.youtube}
                   title={meal.name}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
