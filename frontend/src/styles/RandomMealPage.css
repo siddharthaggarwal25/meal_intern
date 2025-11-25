@@ -1,0 +1,153 @@
+.random-meal-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.random-meal-container {
+  width: 100%;
+  max-width: 900px;
+}
+
+.random-meal-container h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.random-meal-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.random-meal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 400px;
+}
+
+.random-meal-info {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.random-meal-info h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.random-meal-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.meta-item {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.meta-label {
+  font-weight: 600;
+  color: #667eea;
+  min-width: 100px;
+}
+
+.meta-value {
+  color: #555;
+}
+
+.random-meal-description {
+  margin-bottom: 2rem;
+}
+
+.random-meal-description p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.random-meal-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-view-recipe,
+.btn-new-random {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-view-recipe {
+  background: #667eea;
+  color: white;
+}
+
+.btn-view-recipe:hover {
+  background: #5568d3;
+  transform: translateY(-2px);
+}
+
+.btn-new-random {
+  background: #f0f0f0;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+
+.btn-new-random:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .random-meal-card {
+    grid-template-columns: 1fr;
+  }
+
+  .random-meal-image {
+    min-height: 250px;
+  }
+
+  .random-meal-info {
+    padding: 1.5rem;
+  }
+
+  .random-meal-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .random-meal-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .random-meal-actions {
+    flex-direction: column;
+  }
+
+  .btn-view-recipe,
+  .btn-new-random {
+    width: 100%;
+  }
+}
